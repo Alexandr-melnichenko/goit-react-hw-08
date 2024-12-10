@@ -1,0 +1,38 @@
+.contactContainer {
+  border: 1px solid darkgray;
+  display: flex;
+  flex-direction: row;
+  min-width: 300px;
+  padding: 10px;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.params {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.deleteButton {
+  height: 36px;
+  width: auto;
+}
+
+.pContact {
+  margin: 0;
+  padding: 0;
+}
+
+.iconPhone {
+  margin-right: 10px;
+}
+
+.iconMan {
+  margin-right: 10px;
+}

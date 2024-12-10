@@ -1,0 +1,16 @@
+.searchInput {
+  min-width: 340px;
+  height: 30px;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  color: black;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

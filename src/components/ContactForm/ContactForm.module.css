@@ -1,0 +1,41 @@
+.formWraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forma {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.inputForma {
+  min-width: 300px;
+  height: 30px;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  padding-left: 5px;
+  color: black;
+}
+
+.validationMessage {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.labelForma {
+  text-align: left;
+}
+
+.buttonForm {
+  margin: auto;
+  margin-top: 15px;
+  padding: 5px 10px;
+  max-width: 150px;
+}
