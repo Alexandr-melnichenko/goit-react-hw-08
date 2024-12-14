@@ -4,8 +4,8 @@ import * as Yup from "yup";
 import MaskedInput from "react-text-mask";
 import stl from "./ContactForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectContacts } from "../../redux/contactsSlice";
-import { addContact } from "../../redux/contactsOps";
+import { selectContacts } from "../../redux/contacts/selectors";
+import { addContact } from "../../redux/contacts/operations";
 
 const FeedBackSchema = Yup.object().shape({
   name: Yup.string()
