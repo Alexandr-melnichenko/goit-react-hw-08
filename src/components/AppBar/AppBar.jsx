@@ -13,7 +13,7 @@ const AppBar = () => {
     <header className={s.header}>
       <h3>Phonebook</h3>
       {isLoggedIn && <div>{user.email}</div>}
-      <ul>
+      <ul className={s.ulFlex}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contacts">Contacts</NavLink>
         {!isLoggedIn && (
@@ -23,7 +23,9 @@ const AppBar = () => {
           </>
         )}
         {isLoggedIn && (
-          <button onClick={() => dispatch(logout())}>Logout</button>
+          <button className={s.btnLogout} onClick={() => dispatch(logout())}>
+            Logout
+          </button>
         )}
       </ul>
     </header>

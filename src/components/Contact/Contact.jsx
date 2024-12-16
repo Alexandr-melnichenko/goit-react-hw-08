@@ -2,10 +2,15 @@ import style from "./Contact.module.css";
 import { ImPhone } from "react-icons/im";
 import { RiContactsFill } from "react-icons/ri";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contacts/operations";
+import { openModal } from "../../redux/modal/modalSlice";
+// import { deleteContact } from "../../redux/contacts/operations";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(openModal(contact));
+  };
 
   return (
     <div className={style.contactContainer}>
@@ -19,10 +24,7 @@ const Contact = ({ contact }) => {
           {contact.number}
         </p>
       </div>
-      <button
-        className={style.deleteButton}
-        onClick={() => dispatch(deleteContact(contact.id))}
-      >
+      <button className={style.deleteButton} onClick={handleClick}>
         Delete
       </button>
     </div>
