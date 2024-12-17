@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { deleteContact } from "../contacts/operations";
+// import { deleteContact } from "../contacts/operations";
 
 const initialState = {
   isOpen: false,
@@ -12,13 +12,14 @@ const modalSlice = createSlice({
   initialState,
   reducers: {
     openModal: (state, action) => {
+      console.log(action.payload, "ACTION");
       state.isOpen = true;
       state.contact = action.payload;
       state.onConfirm = true;
     },
     closeModal: (state) => {
       state.isOpen = false;
-      state.contact = null;
+      state.contact = initialState.contact;
       state.onConfirm = null;
     },
   },

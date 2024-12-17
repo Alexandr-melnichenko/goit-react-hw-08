@@ -15,6 +15,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import { modalReducer } from "./modal/modalSlice";
+import { editModalReducer } from "./edit/slice";
 // import storage from "redux-persist/lib/storage";
 
 const persistConfig = {
@@ -32,6 +33,7 @@ export const store = configureStore({
     filters: filtersReducer,
     auth: persistedReducer,
     modal: modalReducer,
+    edit: editModalReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

@@ -6,6 +6,7 @@ import stl from "./ContactForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "../../redux/contacts/selectors";
 import { addContact } from "../../redux/contacts/operations";
+import toast from "react-hot-toast";
 
 const FeedBackSchema = Yup.object().shape({
   name: Yup.string()
@@ -29,6 +30,7 @@ const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   console.log("Contacts in contact form:", contacts);
+  const notify = () => toast("Сontact successfully added!");
 
   const initialValues = {
     name: "",
@@ -52,6 +54,7 @@ const ContactForm = () => {
 
     dispatch(addContact(newContact));
     actions.resetForm();
+    notify();
   };
 
   return (

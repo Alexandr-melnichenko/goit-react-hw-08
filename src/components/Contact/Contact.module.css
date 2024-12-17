@@ -20,8 +20,8 @@
 }
 
 .deleteButton {
-  height: 36px;
   width: auto;
+  padding: 4px 10px;
 }
 
 .pContact {
@@ -35,4 +35,10 @@
 
 .iconMan {
   margin-right: 10px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
