@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { deleteContact } from "../contacts/operations";
 
 const initialState = {
   isOpen: false,

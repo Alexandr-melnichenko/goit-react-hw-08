@@ -12,3 +12,5 @@ export const selectFilteredContacts = createSelector(
     );
   }
 );
+
+export const selectEditState = (state) => state.contacts;

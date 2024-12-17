@@ -28,13 +28,20 @@ const Modal = () => {
         <div className={styles.modal}>
           <h2 className={styles.text}>Сonfirmation</h2>
           <p className={styles.text}>You are about to delete a contact:</p>
-          <p className={styles.text}>
+          <p className={styles.boldText}>
             {contact.name} / {contact.number}
           </p>
           <p className={styles.text}>Are You shure?</p>
           <div className={styles.buttons}>
-            <button onClick={handleConfirm}>Delete</button>
-            <button onClick={() => dispatch(closeModal())}>Cancel</button>
+            <button className={styles.buttonGreen} onClick={handleConfirm}>
+              Yes
+            </button>
+            <button
+              className={styles.buttonRed}
+              onClick={() => dispatch(closeModal())}
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Modal from "../../components/Modal/Modal";
 import { selectModalState } from "../../redux/modal/selectors";
 import { Toaster } from "react-hot-toast";
 import EditForm from "../../components/EditForm/EditForm";
-import { selectEditState } from "../../redux/edit/selectors";
+import { selectEditState } from "../../redux/contacts/selectors";
 
 const ContactsPage = () => {
   const { isOpen, contact } = useSelector(selectModalState);

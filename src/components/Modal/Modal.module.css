@@ -10,19 +10,36 @@
   align-items: center;
 }
 .modal {
-  background: fff;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   width: 300px;
   text-align: center;
+  height: auto;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .text {
+  color: #000000;
+}
+
+.boldText {
+  font-weight: 600;
+}
+
+.buttonRed {
+  max-width: 150px;
+  background-color: #9f1616;
+  color: #fff;
+}
+
+.buttonGreen {
+  max-width: 150px;
+  background-color: #4aa24a;
   color: #fff;
 }

@@ -19,8 +19,8 @@
 
 .buttons {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .text {
@@ -63,8 +63,13 @@
 }
 
 .buttonForm {
-  margin: auto;
-  margin-top: 15px;
-  padding: 5px 10px;
   max-width: 150px;
+  background-color: #9f1616;
+  color: #fff;
+}
+
+.buttonFormGreen {
+  max-width: 150px;
+  background-color: #4aa24a;
+  color: #fff;
 }

@@ -1,16 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { editingContact } from "../../redux/contacts/operations";
-// import { closeModal } from "../../redux/modal/modalSlice";
 import styles from "./EditForm.module.css";
-// import { selectModalState } from "../../redux/modal/selectors";
 import toast from "react-hot-toast";
-import { selectEditState } from "../../redux/edit/selectors";
+import { selectEditState } from "../../redux/contacts/selectors";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-// import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import MaskedInput from "react-text-mask";
-import { closeEditModal } from "../../redux/edit/slice";
-// import { useState } from "react";
+import { closeEditModal } from "../../redux/contacts/slice";
 
 const FeedBackSchema = Yup.object().shape({
   name: Yup.string()
@@ -34,8 +30,6 @@ const EditForm = () => {
   const { editIsOpen, editContact } = useSelector(selectEditState);
   const dispatch = useDispatch();
   const notify = () => toast("Сontact successfully edited!");
-  //   const [name, setName] = useState(editContact.name || "");
-  //   const [number, setNumber] = useState(editContact.number || "");
 
   const initialValues = {
     name: editContact.name,
@@ -46,12 +40,6 @@ const EditForm = () => {
 
   const handleEditContact = async (values) => {
     try {
-      //   const updatedContact = {
-      //     id: editContact.id,
-      //     name: editContact.name,
-      //     number: editContact.number,
-      //   };
-
       const updatedContact = {
         id: editContact.id,
         name: values.name,
@@ -132,10 +120,13 @@ const EditForm = () => {
                     component="span"
                   />
                   <div className={styles.buttons}>
-                    <button className={styles.buttonForm} type="submit">
+                    <button className={styles.buttonFormGreen} type="submit">
                       Edit contact
                     </button>
-                    <button onClick={() => dispatch(closeEditModal())}>
+                    <button
+                      className={styles.buttonForm}
+                      onClick={() => dispatch(closeEditModal())}
+                    >
                       Cancel
                     </button>
                   </div>

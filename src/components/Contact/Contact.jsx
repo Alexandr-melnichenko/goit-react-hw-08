@@ -4,9 +4,8 @@ import { RiContactsFill } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 import { openModal } from "../../redux/modal/modalSlice";
 import { CiEdit } from "react-icons/ci";
-import { openEditModal } from "../../redux/edit/slice";
+import { openEditModal } from "../../redux/contacts/slice";
 import { MdOutlineDeleteForever } from "react-icons/md";
-// import { deleteContact } from "../../redux/contacts/operations";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
